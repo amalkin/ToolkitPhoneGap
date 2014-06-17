@@ -1,0 +1,3 @@
+# view AndroidManifest.xml #generated:6
+-keep class com.abobe.poc.am.toolkit.ToolkitwithPhoneGap { <init>(...); }
+
