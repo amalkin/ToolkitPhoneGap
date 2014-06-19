@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
     "prepare_queue": {
         "installed": [],
@@ -7,3 +8,6 @@
     "installed_plugins": {},
     "dependent_plugins": {}
 }
+=======
+{"prepare_queue":{"installed":[],"uninstalled":[]},"config_munge":{"res/xml/config.xml":{"/*":{"<feature name=\"AttendeaseBeacons\"><param name=\"android-package\" value=\"com.attendease.ibeacons.AttendeaseBeacons\" /><param name=\"onload\" value=\"true\" /></feature>":1}},"AndroidManifest.xml":{"/*":{},"/manifest":{"<uses-permission android:name=\"android.permission.BLUETOOTH\" />":1,"<uses-permission android:name=\"android.permission.BLUETOOTH_ADMIN\" />":1},"/manifest/application":{"<service android:name=\"com.attendease.ibeacons.AttendeaseBeaconConsumer\" />":1}}},"installed_plugins":{"com.attendease.ibeacons":{"PACKAGE_NAME":"com.abobe.poc.am.toolkit"}},"dependent_plugins":{}}
+>>>>>>> c88223f08a4bd9a984f2d98b0476bbfff08afeb4
