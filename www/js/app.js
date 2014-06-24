@@ -43,6 +43,36 @@ mediaApp.config(function($stateProvider, $urlRouterProvider) {
 			}
 		})
 		
+		.state('menu.calendar', {
+			url: "/calendar",
+			views: {
+				'menuContent': {
+					templateUrl: "views/calendar.html",
+					controller: "CalendarCtrl"
+				}
+			}
+		})
+		
+		.state('menu.geolocation', {
+			url: "/geolocation",
+			views: {
+				'menuContent': {
+					templateUrl: "views/geolocation.html",
+					controller: "GeolocationCtrl"
+				}
+			}
+		})
+		
+		.state('menu.compass', {
+			url: "/compass",
+			views: {
+				'menuContent': {
+					templateUrl: "views/compass.html",
+					controller: "CompassCtrl"
+				}
+			}
+		})
+		
 		.state('menu.search', {
 			url: "/search",
 			views: {
