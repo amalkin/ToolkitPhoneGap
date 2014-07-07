@@ -166,11 +166,33 @@ mediaApp.controller('CompassCtrl', function ($scope,$window) {
         $scope.sideMenuController.toggleLeft();
 })
 
+mediaApp.controller('FiltersearchCtrl', function ($scope,$window) {
+	console.log('[com.adobe.am.pg.base][controllers.js]: FiltersearchCtrl');
+    $scope.navTitle = "Filtered search";
+	
+	$scope.onKeyPress = function($event) {
+		console.log($event.charCode);
+		console.log($event.altKey);
+	}
+	
+	$scope.leftButtons = [{
+		type: 'button-icon button-clear ion-ios7-arrow-back',
+		tap: function(e) {
+			$window.history.back();
+		}
+	}];
+	
+    if ($scope.sideMenuController.isOpen())
+        $scope.sideMenuController.toggleLeft();
+})
+
+
+
 mediaApp.controller('AboutCtrl', function ($scope) {
     $scope.navTitle = "About Media Explorer";
     if ($scope.sideMenuController.isOpen())
         $scope.sideMenuController.toggleLeft();
-
+		
     $scope.rightButtons =  [{
         type: 'button-icon button-clear ion-email',
         tap: function(e) {

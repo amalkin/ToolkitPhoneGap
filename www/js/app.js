@@ -73,6 +73,16 @@ mediaApp.config(function($stateProvider, $urlRouterProvider) {
 			}
 		})
 		
+		.state('menu.filtersearch', {
+			url: "/filtersearch",
+			views: {
+				'menuContent': {
+					templateUrl: "views/filtersearch.html",
+					controller: "FiltersearchCtrl"
+				}
+			}
+		})
+		
 		.state('menu.search', {
 			url: "/search",
 			views: {

@@ -58,3 +58,14 @@ body {
         background-color: #000;
     }
 }
+
+.selected-filter {
+	float: left;
+	text-transform: uppercase;
+	font-weight: 700;
+	color: #000;
+	background-color: #FFe900;
+	font-size: 0.8em;
+	padding: 4px 9px 5px 9px;
+	margin-right: 5px;
+}
