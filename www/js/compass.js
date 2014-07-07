@@ -1,32 +1,44 @@
 // The watch id references the current `watchHeading`
-var bergaya = null;
+var watchID = null;
 
-function helah() {
-	
-	// Update compass every 3 seconds
-	var options = { frequency: 1000 };
+// Wait for device API libraries to load
+//
+document.addEventListener("deviceready", onDeviceReady, false);
 
-	bergaya = navigator.compass.watchHeading(onCompass, offCompass, options);
+// device APIs are available
+//
+function onDeviceReady() {
+    startWatch();
+}
+
+// Start watching the compass
+//
+function startWatch() {
+
+    // Update compass every 3 seconds
+    var options = { frequency: 3000 };
+
+    watchID = navigator.compass.watchHeading(onSuccess, onError, options);
 }
 
 // Stop watching the compass
 //
-function stophelah() {
-	if (bergaya) {
-		navigator.compass.clearWatch(bergaya);
-		bergaya = null;
-	}
+function stopWatch() {
+    if (watchID) {
+        navigator.compass.clearWatch(watchID);
+        watchID = null;
+    }
 }
 
 // onSuccess: Get the current heading
 //
-function onCompass(heading) {
-	var element = document.getElementById('heading');
-	element.innerHTML = 'Heading: ' + heading.magneticHeading;
+function onSuccess(heading) {
+    var element = document.getElementById('heading');
+    element.innerHTML = 'Heading: ' + heading.magneticHeading;
 }
 
 // onError: Failed to get the heading
 //
-function offCompass(compassError) {
-	alert('Compass error: ' + compassError.code);
+function onError(compassError) {
+    alert('Compass error: ' + compassError.code);
 }
