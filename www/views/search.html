@@ -33,7 +33,7 @@
                 <div class="col col-20 light">Price</div>
             </div>
             <div class="row stable-bg" ng-repeat="item in mediaResults.results | filter:filterTerm | orderBy:sortBy" >
-               <div class="col"><a ng-click="checkMedia(item)"><img id="img" ng-src="{{item.artworkUrl60}}"/></a></div>
+                <div class="col"><a ng-click="checkMedia(item)"><img id="img" ng-src="{{item.artworkUrl60}}"/></a></div>
                 <div class="col"><a ng-click="checkMedia(item)">{{(item.trackName != null) && item.trackName || item.collectionName}}</a></div>
                 <div class="col col-20">{{item.trackPrice}}</div>
             </div>

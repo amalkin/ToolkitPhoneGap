@@ -108,6 +108,21 @@ mediaApp.controller('CameraCtrl', function ($scope,$window) {
         $scope.sideMenuController.toggleLeft();
 })
 
+mediaApp.controller('AccelerometerCtrl', function ($scope,$window) {
+    console.log('[com.adobe.am.pg.base][controllers.js]: AccelerometerCtrl');
+    $scope.navTitle = "Accelerometer";
+
+    $scope.leftButtons = [{
+        type: 'button-icon button-clear ion-ios7-arrow-back',
+        tap: function(e) {
+            $window.history.back();
+        }
+    }];
+
+    if ($scope.sideMenuController.isOpen())
+        $scope.sideMenuController.toggleLeft();
+})
+
 mediaApp.controller('CalendarCtrl', function ($scope,$window) {
 	console.log('[com.adobe.am.pg.base][controllers.js]: CalendarCtrl');
     $scope.navTitle = "Calendar";

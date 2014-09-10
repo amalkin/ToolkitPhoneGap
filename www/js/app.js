@@ -82,6 +82,16 @@ mediaApp.config(function($stateProvider, $urlRouterProvider) {
 				}
 			}
 		})
+
+        .state('menu.accelerometer', {
+            url: "/accelerometer",
+            views: {
+                'menuContent': {
+                    templateUrl: "views/accelerometer.html",
+                    controller: "AccelerometerCtrl"
+                }
+            }
+        })
 		
 		.state('menu.search', {
 			url: "/search",
